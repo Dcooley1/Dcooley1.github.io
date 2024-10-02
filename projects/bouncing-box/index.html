@@ -8,9 +8,7 @@
 	<style>
 		.box {
 			width: 70px;
-			height: 70px;
-			background-color: teal;
-			font-size: 300%;
+			height: 70px;                                                                                                                                                               			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
@@ -21,7 +19,7 @@
 		}
 
 		.board {
-			height: 100vh;
+			height: 100px;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -53,7 +51,7 @@
 
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX) {
-				box.css("left", newPositionX);
+				box.css("left", new variable);
 			}
 
 			// changes the text displayed on the Box
@@ -67,7 +65,7 @@
 
 			// TODO 2 - Variable declarations 
 
-
+			var positionX = 0;
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -75,9 +73,10 @@
 			turn it around! 
 			*/
 			function update() {
-
-
-			};
+				positionX=positionX + 10;
+				moveBoxTo(positionX);
+				
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
